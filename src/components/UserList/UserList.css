@@ -1,0 +1,8 @@
+.user-list {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: stretch;
+    padding: 1rem;
+    list-style: none;
+}

@@ -1,0 +1,18 @@
+.error-message{
+    z-index: 200;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: 20vh;
+}
+
+.error-message-header {
+    background: #40005d;
+    color: white;
+    padding: 1rem;
+}
+
+.error-message-content{
+    padding: 1rem;
+}

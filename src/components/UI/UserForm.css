@@ -1,0 +1,27 @@
+.form-controls{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.form-controls label {
+    font: inherit;
+    margin: 0.25rem;
+    padding: 0.25rem;
+}
+
+.form-input {
+    /* border-radius: 6px; */
+    border: 1px solid #ccc;
+    font: inherit;
+    outline: none;
+    margin: 0.25rem;
+    padding: 0.25rem;
+    align-items: stretch;
+}
+
+.form-input:focus{
+    border: 1px solid #40005d;
+}
