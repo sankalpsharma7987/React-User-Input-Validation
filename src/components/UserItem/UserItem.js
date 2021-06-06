@@ -1,9 +1,9 @@
-import './UserItem.css';
+import styles from './UserItem.module.css';
 
 const UserItem = (props)=>{
 
     return (
-        <li className = "user-item" id = {props.id}>
+        <li className = {styles["user-item"]} id = {props.id}>
             {`${props.userName} (${props.age} years old)`}
         </li>
     )
