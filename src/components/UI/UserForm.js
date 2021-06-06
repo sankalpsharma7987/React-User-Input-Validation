@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ReactDOM from 'react-dom';
 
 import Card from "./Card";
 import ErrorModal from '../ErrorModal/ErrorModal';
@@ -49,12 +50,12 @@ const UserForm = (props) => {
   return (
     <React.Fragment>
       
-      {error && (
+      {error && ReactDOM.createPortal(
         <ErrorModal
           message={error.message}
           visible={error.visible}
           onClose={closeErrorModalHandler}
-        />
+        />,document.getElementById("modal-root")
       )}
 
       <Card>
