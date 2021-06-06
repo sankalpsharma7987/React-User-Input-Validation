@@ -81,8 +81,12 @@ const UserForm = (props) => {
               onChange={changeUserAge}
             ></input>
             {/* <Button buttonType="submit"> Add User </Button> */}
+          </div>
+
+          <div class="form-actions">
             <button type="submit" className="button" disabled={disable}> Add User </button>
           </div>
+          
         </form>
       </Card>
     </React.Fragment>
