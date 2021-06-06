@@ -1,13 +1,13 @@
+import React from 'react';
 import Card from '../UI/Card';
 import UserItem from '../UserItem/UserItem';
-import Wrapper from '../Helper/Wrapper';
 
 import  './UserList.css';
 
 const UserList = (props)=>{
 
     return (
-        <Wrapper>
+        <React.Fragment>
             <Card>
                 <ul  className = "user-list">
                 {
@@ -17,7 +17,7 @@ const UserList = (props)=>{
                 }
                 </ul>
             </Card>
-        </Wrapper>
+        </React.Fragment>
     )
 
 }
