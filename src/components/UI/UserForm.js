@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import Card from "./Card";
 import ErrorModal from '../ErrorModal/ErrorModal';
+import Wrapper from '../Helper/Wrapper';
 import Button from "./Button";
 
 import "./UserForm.css";
@@ -47,7 +48,7 @@ const UserForm = (props) => {
   };
 
   return (
-    <div>
+    <Wrapper>
       
       {error && (
         <ErrorModal
@@ -79,7 +80,7 @@ const UserForm = (props) => {
           </div>
         </form>
       </Card>
-    </div>
+    </Wrapper>
   );
 };
 

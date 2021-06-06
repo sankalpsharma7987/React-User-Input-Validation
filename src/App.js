@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import UserForm from './components/UI/UserForm';
 import UserList from './components/UserList/UserList';
+import Wrapper from './components/Helper/Wrapper';
 
 const App = ()=>{
   
@@ -26,13 +27,13 @@ const App = ()=>{
   
   return (
 
-    <div>
+    <Wrapper>
 
       <UserForm onAddUser = {addUserObjectHandler}></UserForm>
 
         {content}
 
-    </div>
+    </Wrapper>
     
   );
 }
