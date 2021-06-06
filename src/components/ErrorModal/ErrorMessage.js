@@ -1,20 +1,20 @@
 import Card from '../UI/Card'
-import "./ErrorMessage.css";
+import styles from "./ErrorMessage.module.css";
 
 
 const ErrorMessage = (props) => {
   return (
     <Card>
 
-      <div className="error-message">
+      <div className={styles["error-message"]}>
 
-        <div className="error-message-header">Invalid User Input</div>
+        <div className={styles["error-message-header"]}>Invalid User Input</div>
 
-        <div className="error-message-content">{props.message}</div>
+        <div className={styles["error-message-content"]}>{props.message}</div>
 
       </div>
 
-      <button type="click" className="button">
+      <button type="click" className={styles["button"]}>
         Okay
       </button>
       

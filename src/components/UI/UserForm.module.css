@@ -33,7 +33,7 @@
 
 }
 
-.form-actions.button {
+.button {
     color: white;
     background: #40005d;
     font-size: 1rem;
@@ -43,14 +43,14 @@
     cursor: pointer;
 }
 
-.form-actions.button:disabled{
+.button:disabled{
     background: lightgray;
     color: black;
 }
 
 @media (min-width: 768px)
 {
-    .form-actions.button {
+    .button {
         width: auto;
     }
 }

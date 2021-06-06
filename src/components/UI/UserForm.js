@@ -3,9 +3,8 @@ import ReactDOM from 'react-dom';
 
 import Card from "./Card";
 import ErrorModal from '../ErrorModal/ErrorModal';
-// import Button from "./Button";
 
-import "./UserForm.css";
+import styles from "./UserForm.module.css";
 
 const UserForm = (props) => {
   const [enteredName, setName] = useState("");
@@ -20,6 +19,7 @@ const UserForm = (props) => {
     if (enteredName.trim().length > 0 && enteredAge > 1) 
     {
       props.onAddUser(enteredName, enteredAge);
+      setDisable(false);
     } 
 
     else if (!enteredName.trim().length === 0 || !+enteredAge) 
@@ -63,31 +63,40 @@ const UserForm = (props) => {
       )}
 
       <Card>
+
         <form onSubmit={submitUserHandler}>
-          <div className="form-controls">
+
+          <div className={styles["form-controls"]}>
+
             <label> Username </label>
+
             <input
               type="text"
-              className="form-input"
+              className={styles["form-input"]}
               value={enteredName}
               onChange={changeUserName}
             ></input>
+
             <label> Age(Years)</label>
+
             <input
               type="number"
-              className="form-input"
+              className={styles["form-input"]}
               value={enteredAge}
               step="1"
               onChange={changeUserAge}
             ></input>
-            {/* <Button buttonType="submit"> Add User </Button> */}
+
           </div>
 
-          <div class="form-actions">
-            <button type="submit" className="button" disabled={disable}> Add User </button>
+          <div className={styles["form-actions"]}>
+
+            <button type="submit" className={styles["button"]} disabled={disable}> Add User </button>
+
           </div>
           
         </form>
+
       </Card>
     </React.Fragment>
   );

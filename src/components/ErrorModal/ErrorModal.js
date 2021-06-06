@@ -1,9 +1,8 @@
 import ErrorMessage from "./ErrorMessage";
 
-import "./ErrorModal.css";
+import  styles from "./ErrorModal.module.css";
 
 const ErrorModal = (props) => {
-  let classes = "error-modal";
 
   const hideErrorModalHandler = (event) => {
 
@@ -16,7 +15,7 @@ const ErrorModal = (props) => {
 
   return (
     <div
-      className={props.visible ? `${classes} visible` : `${classes}`}
+      className={props.visible ? `${styles["error-modal"]} ${styles["visible"]}` : `${styles["error-modal"]}`}
       onClick={hideErrorModalHandler}
     >
       <ErrorMessage message={props.message}></ErrorMessage>
