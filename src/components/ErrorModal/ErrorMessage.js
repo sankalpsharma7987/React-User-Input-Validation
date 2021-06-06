@@ -1,5 +1,4 @@
 import Card from '../UI/Card'
-import Button from "../UI/Button";
 import "./ErrorMessage.css";
 
 
@@ -15,9 +14,9 @@ const ErrorMessage = (props) => {
 
       </div>
 
-      <Button type="click">
+      <button type="click" className="button">
         Okay
-      </Button>
+      </button>
       
       
     </Card>

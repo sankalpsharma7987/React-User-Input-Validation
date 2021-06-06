@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import Card from "./Card";
 import ErrorModal from '../ErrorModal/ErrorModal';
-import Button from "./Button";
+// import Button from "./Button";
 
 import "./UserForm.css";
 
@@ -11,9 +11,11 @@ const UserForm = (props) => {
   const [enteredName, setName] = useState("");
   const [enteredAge, setAge] = useState("");
   const [error, setError] = useState(null);
+  const[disable,setDisable] = useState(false);
 
   const submitUserHandler = (e) => {
     e.preventDefault();
+    setDisable(true);
 
     if (enteredName.trim().length > 0 && enteredAge > 1) 
     {
@@ -45,8 +47,10 @@ const UserForm = (props) => {
 
   const closeErrorModalHandler = () => {
     setError(null);
+    setDisable(false);
   };
 
+ 
   return (
     <React.Fragment>
       
@@ -76,7 +80,8 @@ const UserForm = (props) => {
               step="1"
               onChange={changeUserAge}
             ></input>
-            <Button buttonType="submit"> Add User </Button>
+            {/* <Button buttonType="submit"> Add User </Button> */}
+            <button type="submit" className="button" disabled={disable}> Add User </button>
           </div>
         </form>
       </Card>
