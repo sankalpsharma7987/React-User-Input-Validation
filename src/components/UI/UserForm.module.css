@@ -1,4 +1,4 @@
-.form-controls{
+.form-controls {
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -22,11 +22,11 @@
     align-items: stretch;
 }
 
-.form-input:focus{
+.form-input:focus { 
     border: 1px solid #40005d;
 }
 
-.form-actions{
+.form-actions {
     display: flex;
     justify-content: flex-start;
     padding: 0 0 1rem 1rem;
@@ -43,7 +43,7 @@
     cursor: pointer;
 }
 
-.button:disabled{
+.button:disabled {
     background: lightgray;
     color: black;
 }
